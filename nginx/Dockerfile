@@ -23,6 +23,7 @@ RUN /install_frappe ${FRAPPE_BRANCH} && \
   /install_app barcode_shrdc https://github.com/${GITHUB_OWNER}/ERPNext-Barcode-Integration master && \
   /install_app autocount https://github.com/${GITHUB_OWNER}/ERPNext-Autocount-Integration master && \
   /install_app short_courses https://github.com/Shakila-Sahira/ERPNext-Short-Courses && \
+  /install_app ecommerce https://github.com/h-saurav1810/E-Commerce && \
   /prepare_production
 
 FROM frappe/erpnext-nginx:${FRAPPE_BRANCH}
@@ -31,7 +32,7 @@ COPY --from=0 /home/frappe/frappe-bench/sites/ /var/www/html/
 COPY --from=0 /rsync /rsync
 
 # Append list of installed to apps.txt
-RUN echo -n "metabase_integration\nerpnext_telegram_integration\nbarcode_shrdc\nfrepple\nautocount\nsql_accounting_software\nshort_courses" >> /var/www/html/apps.txt
+RUN echo -n "metabase_integration\nerpnext_telegram_integration\nbarcode_shrdc\nfrepple\nautocount\nsql_accounting_software\nshort_courses\ecommerce" >> /var/www/html/apps.txt
 
 VOLUME [ "/assets" ]
 
