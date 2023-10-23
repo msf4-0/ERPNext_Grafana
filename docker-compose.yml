@@ -24,7 +24,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
   custom-erpnext-nginx:
-    image: ${DOCKER_USERNAME}/custom-erpnext-nginx-1:${ERPNEXT_VERSION}
+    image: ${DOCKER_USERNAME}/custom-erpnext-nginx:${ERPNEXT_VERSION}
     restart: on-failure
     environment:
       - FRAPPE_PY=erpnext-python
@@ -44,7 +44,7 @@ services:
       - assets-vol:/assets:rw
 
   erpnext-python:
-    image: ${DOCKER_USERNAME}/custom-erpnext-worker-1:${ERPNEXT_VERSION}
+    image: ${DOCKER_USERNAME}/custom-erpnext-worker:${ERPNEXT_VERSION}
     #image: shrdc/erpnext-python:version-12
     restart: on-failure
     environment:
@@ -67,7 +67,7 @@ services:
       - sites-vol:/home/frappe/frappe-bench/sites:rw
 
   custom-erpnext-worker-default:
-    image: ${DOCKER_USERNAME}/custom-erpnext-worker-1:${ERPNEXT_VERSION}
+    image: ${DOCKER_USERNAME}/custom-erpnext-worker:${ERPNEXT_VERSION}
     restart: on-failure
     command: worker
     depends_on:
@@ -77,7 +77,7 @@ services:
       - sites-vol:/home/frappe/frappe-bench/sites:rw
 
   custom-erpnext-worker-short:
-    image: ${DOCKER_USERNAME}/custom-erpnext-worker-1:${ERPNEXT_VERSION}
+    image: ${DOCKER_USERNAME}/custom-erpnext-worker:${ERPNEXT_VERSION}
     restart: on-failure
     command: worker
     environment:
@@ -89,7 +89,7 @@ services:
       - sites-vol:/home/frappe/frappe-bench/sites:rw
 
   custom-erpnext-worker-long:
-    image: ${DOCKER_USERNAME}/custom-erpnext-worker-1:${ERPNEXT_VERSION}
+    image: ${DOCKER_USERNAME}/custom-erpnext-worker:${ERPNEXT_VERSION}
     restart: on-failure
     command: worker
     environment:
@@ -101,7 +101,7 @@ services:
       - sites-vol:/home/frappe/frappe-bench/sites:rw
 
   erpnext-schedule:
-    image: ${DOCKER_USERNAME}/custom-erpnext-worker-1:${ERPNEXT_VERSION}
+    image: ${DOCKER_USERNAME}/custom-erpnext-worker:${ERPNEXT_VERSION}
     restart: on-failure
     command: schedule
     depends_on:
@@ -141,7 +141,7 @@ services:
       - "${MARIADB_SERVER_PORT}:3306"
 
   site-creator:
-    image: ${DOCKER_USERNAME}/custom-erpnext-worker-1:${ERPNEXT_VERSION}
+    image: ${DOCKER_USERNAME}/custom-erpnext-worker:${ERPNEXT_VERSION}
     restart: "no"
     command: new
     depends_on:
