@@ -49,7 +49,7 @@
 <br>
 
 # E-Commerce - Shopify
-![E-Commerce - Shopify](images/Shopify.png)
+![E-Commerce - Shopify](images/ecomshopify.png)
 
 <br>
 
