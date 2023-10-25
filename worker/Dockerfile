@@ -11,4 +11,4 @@ RUN install_app metabase_integration https://github.com/${GITHUB_OWNER}/ERPNext-
   install_app autocount https://github.com/${GITHUB_OWNER}/ERPNext-Autocount-Integration master && \
   install_app sql_accounting_software https://github.com/Nb-Richard/sql_accounting main && \
   install_app short_courses https://github.com/Shakila-Sahira/ERPNext-Short-Courses && \ 
-  install_app ecommerce https://github.com/h-saurav1810/E-Commerce
+  install_app shopify https://github.com/h-saurav1810/Shopify
