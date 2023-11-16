@@ -75,7 +75,7 @@ In order to utilise the full integration between ERPNext and Frepple, you will n
     - [Autocount](https://github.com/msf4-0/ERPNext-Autocount-Integration)
     - [SQL Account](https://github.com/msf4-0/ERPNext-SQL-Accounting-Integration)
     - [Short Courses](https://github.com/Shakila-Sahira/ERPNext-Short-Courses)
-    - [E-Commerce - Shopify](https://github.com/h-saurav1810/Shopify)
+    - [E-Commerce - Shopify](https://github.com/h-saurav1810/ERPNext-Shopify)
 
 3. For Windows & MacOS user, start from `Section 3`.
 4. For Ubuntu user, start from `Section 4`.
@@ -109,10 +109,10 @@ In order to utilise the full integration between ERPNext and Frepple, you will n
 ### 5. Setup
 
 1. Clone this repo.
-    - `git clone https://github.com/h-saurav1810/ERPNext-Shopify-ECommerce`
+    - `git clone https://github.com/h-saurav1810/ERPNext-ECommerce-Shopify`
 
 2. Navigate to the cloned folder.
-    - `cd ERPNext-Shopify-ECommerce`
+    - `cd ERPNext-ECommerce-Shopify`
 
 3. In `enx-example`, you can change the variables that would be used in this installation process to your preference such as the following:
     - Server port to host ERPNext,`ERPNEXT_SERVER_PORT`. Default is `8000`.
