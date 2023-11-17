@@ -4,11 +4,11 @@ FRAPPE_VERSION=version-12
 MARIADB_HOST=mariadb
 MYSQL_ROOT_PASSWORD=admin
 SITE_NAME=custom-erpnext-nginx
-SITES=`custom-erpnext-nginx`
+SITES=`custom-erpnext-nginx1`
 DB_ROOT_USER=root
 ADMIN_PASSWORD=admin
-INSTALL_APPS=erpnext,metabase_integration,erpnext_telegram_integration,frepple,barcode_shrdc,autocount,sql_accounting_software,short_courses,shopify
+INSTALL_APPS=erpnext,metabase_integration,erpnext_telegram_integration,frepple,barcode_shrdc,autocount,sql_accounting_software,short_courses,shopify,superset
 ENTRYPOINT_LABEL=traefik.http.routers.excel-erpnext-nginx.entrypoints=web
-DOCKER_USERNAME=sauravhzra
+DOCKER_USERNAME=muhd162
 ERPNEXT_SERVER_PORT=8000
 MARIADB_SERVER_PORT=3306
