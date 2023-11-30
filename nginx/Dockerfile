@@ -25,6 +25,7 @@ RUN /install_frappe ${FRAPPE_BRANCH} && \
   /install_app short_courses https://github.com/Shakila-Sahira/ERPNext-Short-Courses && \
   /install_app shopify https://github.com/h-saurav1810/ERPNext-Shopify && \
   /install_app superset https://github.com/HazreenZ/superset_erp && \
+  /install_app grafana https://github.com/HazreenZ/Grafana_erp && \
   
   /prepare_production
 
@@ -34,7 +35,7 @@ COPY --from=0 /home/frappe/frappe-bench/sites/ /var/www/html/
 COPY --from=0 /rsync /rsync
 
 # Append list of installed to apps.txt
-RUN echo -n "metabase_integration\nerpnext_telegram_integration\nbarcode_shrdc\nfrepple\nautocount\nsql_accounting_software\nshort_courses\nshopify\nsuperset" >> /var/www/html/apps.txt
+RUN echo -n "metabase_integration\nerpnext_telegram_integration\nbarcode_shrdc\nfrepple\nautocount\nsql_accounting_software\nshort_courses\nshopify\nsuperset\ngrafana" >> /var/www/html/apps.txt
 
 VOLUME [ "/assets" ]
 
