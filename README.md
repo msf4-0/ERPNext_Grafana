@@ -112,7 +112,7 @@ In order to utilise the full integration between ERPNext and Frepple, you will n
     - `git clone https://github.com/h-saurav1810/ERPNext-ECommerce-Shopify`
 
 2. Navigate to the cloned folder.
-    - `cd ERPNext-ECommerce-Shopify`
+    - `cd ERPNext-Grafana1`
 
 3. In `enx-example`, you can change the variables that would be used in this installation process to your preference such as the following:
     - Server port to host ERPNext,`ERPNEXT_SERVER_PORT`. Default is `8000`.
@@ -223,6 +223,8 @@ Example file uses following apps:
 - [Barcode Scanning System](https://github.com/leexy0/barcode_shrdc)
 - [Autocount](https://github.com/msf4-0/ERPNext-Autocount-Integration)
 - [SQL Account](https://github.com/msf4-0/ERPNext-SQL-Accounting-Integration)
+- [Grafana](https://github.com/HazreenZ/Grafana_erp).
+- [Superset](https://github.com/HazreenZ/superset_erp). 
 
 ### 2. Build images
 
